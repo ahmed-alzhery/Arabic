@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع الشعر الشيعي</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الشعر الشيعي</title>
+
+  <!-- ربط ملف CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#poets">الشعراء</a></li>
-                <li><a href="#poems">الأعمال</a></li>
-                <li><a href="#about">عن الموقع</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h1>مرحبًا بك في موقع الشعر الأدبي الشيعي</h1>
-        <p>هنا نحتفي بجمال الحرف وروح الولاء.</p>
-        <img src="images/home-image.jpg" alt="صورة الرئيسية" class="section-image">
-    </section>
+  <header data-aos="fade-down">
+    <h1>🌙 موقع الشعر الشيعي</h1>
+    <p>صوت الحسين في قلوب المحبين</p>
+  </header>
 
-    <section id="poets">
-        <h2>الشعراء</h2>
-        <ul>
-            <li>الشيخ جعفر الحلي</li>
-            <li>السيد رضا الهندي</li>
-            <li>الشيخ عبد الحسين شكر</li>
-        </ul>
-        <img src="images/poets-image.jpg" alt="صورة الشعراء" class="section-image">
-    </section>
+  <nav data-aos="fade-up">
+    <ul>
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#poems">القصائد</a></li>
+      <li><a href="#about">عن الموقع</a></li>
+    </ul>
+  </nav>
 
-    <section id="poems">
-        <h2>قصائد مختارة</h2>
-        <div class="poem">
-            <h3>قصيدة في مدح الحسين (ع)</h3>
-            <p>يا ساكنَ كربلاءَ الطهرِ يا سبطَ الهدى...</p>
-        </div>
-        <img src="images/poems-image.jpg" alt="صورة القصائد" class="section-image">
-    </section>
+  <section id="home" data-aos="fade-right">
+    <h2>مرحباً بك</h2>
+    <p>هنا ننشر الشعر الولائي، والقصائد الحسينية، بكل محبة وإخلاص.</p>
+    <img src="images/home-image.jpg" alt="صورة ترحيبية" width="300">
+  </section>
 
-    <section id="about">
-        <h2>عن الموقع</h2>
-        <p>نسعى إلى نشر التراث الشعري الشيعي وتعريف الأجيال به.</p>
-        <img src="images/about-image.jpg" alt="صورة عن الموقع" class="section-image">
-    </section>
+  <section id="poems" data-aos="fade-left">
+    <h2>أحدث القصائد</h2>
+    <ul>
+      <li>يا حسينُ وهل يُطفئ النورَ دمْعُ؟</li>
+      <li>ليلُ كربلاءَ... ودمعُ الزهراءِ</li>
+      <li>صرخةُ العباسِ... في الفراتِ</li>
+    </ul>
+    <img src="images/poets-image.jpg" alt="شاعر" width="300">
+  </section>
 
-    <footer>
-        <p>&copy; 2025 - موقع الشعر الأدبي الشيعي</p>
-    </footer>
+  <section id="about" data-aos="zoom-in">
+    <h2>عن الموقع</h2>
+    <p>نسعى لنشر الشعر الشيعي الأصيل، ونعمل على أرشفة القصائد الولائية بمختلف أنواعها.</p>
+  </section>
 
-    <script src="script.js"></script>
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 - جميع الحقوق محفوظة | موقع الشعر الشيعي</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
