@@ -1,101 +1,68 @@
-/* الخط الأساسي */
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-
 body {
-  font-family: 'Amiri', serif;
-  background: url('images/shiite-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  direction: rtl;
-}
-
-/* تظليل خلفية */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
 }
 
 header {
+  background-color: #333;
+  color: white;
   text-align: center;
-  padding: 40px 20px;
-  background-color: rgba(255, 0, 0, 0.1);
-  border-bottom: 2px solid crimson;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: #f2dede;
+h1 {
+  margin: 0;
 }
 
-header p {
-  font-size: 1.2em;
-  color: #f9f9f9;
+#poets {
+  background-color: rgba(0, 0, 0, 0.6); /* خلفية مظللة */
+  border-radius: 10px;
+  padding: 40px;
+  margin: 30px auto;
+  width: 80%;
 }
 
-nav {
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  padding: 10px 0;
+#poets h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ffd3d3; /* لون العنوان */
 }
 
-nav ul {
+.poets-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav a {
-  color: #f9f9f9;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: crimson;
-}
-
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #ffd3d3;
-}
-
-section p,
-section li {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-img {
-  margin-top: 20px;
-  max-width: 90%;
-  border: 3px solid crimson;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #800000;
-}
-
-footer {
-  text-align: center;
+.poet-name {
+  font-size: 1.5em;
+  color: #ffd700;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  font-size: 0.9em;
-  color: #ccc;
-  margin-top: 30px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.poet-name:hover {
+  background-color: rgba(255, 69, 0, 0.8);
+}
+
+.poet-poems {
+  list-style: none;
+  padding-left: 20px;
+  display: none; /* بدايةً نخبئ القصائد */
+}
+
+.poet-poems li {
+  font-size: 1.2em;
+  color: #f9f9f9;
+  padding: 5px 0;
+}
+
+.poet-poems li:hover {
+  color: #ffcb00;
 }
