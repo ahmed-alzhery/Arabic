@@ -10,29 +10,19 @@ header {
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
 }
 
-.header-img {
+.about-img {
   width: 100%;
   height: 300px;
-  object-fit: cover; /* لضمان ظهور الصورة بشكل جيد */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; /* التأكد من أن النص يظهر فوق الصورة */
-}
-
-h1 {
-  margin: 0;
-  position: relative;
-  z-index: 1; /* جعل النص فوق الصورة */
+  object-fit: cover;
 }
 
 #poets {
-  background-color: rgba(0, 0, 0, 0.6); /* خلفية مظللة */
-  border-radius: 10px;
   padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffd3d3;
+  border-radius: 10px;
   margin: 30px auto;
   width: 80%;
 }
@@ -40,7 +30,6 @@ h1 {
 #poets h2 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #ffd3d3; /* لون العنوان */
 }
 
 .poets-list ul {
@@ -66,7 +55,7 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px; /* المسافة بين الصورة واسم الشاعر */
+  margin-right: 10px;
 }
 
 .poet-name:hover {
@@ -76,7 +65,7 @@ h1 {
 .poet-poems {
   list-style: none;
   padding-left: 20px;
-  display: none; /* بدايةً نخبئ القصائد */
+  display: none;
 }
 
 .poet-poems li {
