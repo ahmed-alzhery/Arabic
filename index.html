@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع الشعر الشيعي</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="images/shia-header-image.jpg" alt="صورة شيعية" class="header-img">
+    <img src="about-image.jpg" alt="صورة عن الموقع" class="about-img">
     <h1>موقع الشعر الشيعي</h1>
   </header>
 
+  <!-- خانة الشعراء -->
   <section id="poets" data-aos="fade-up">
     <h2>أسماء الشعراء</h2>
     <div class="poets-list">
       <ul>
+        <!-- الشاعر الأول -->
         <li class="poet-name" onclick="togglePoems('poet1')">
-          <img src="images/ali-bin-abi-talib.jpg" alt="الشاعر علي بن أبي طالب" class="poet-img">
+          <img src="poets-image.jpg" alt="الشاعر علي بن أبي طالب" class="poet-img">
           الشاعر علي بن أبي طالب
         </li>
         <ul id="poet1" class="poet-poems">
@@ -25,8 +27,10 @@
           <li>قصيدة 2 - ليلُ كربلاءَ...</li>
           <li>قصيدة 3 - صرخةُ العباسِ...</li>
         </ul>
+        
+        <!-- الشاعر الثاني -->
         <li class="poet-name" onclick="togglePoems('poet2')">
-          <img src="images/hussein-al-ahdal.jpg" alt="الشاعر حسين الأهدل" class="poet-img">
+          <img src="قيس_4.jpg.webp" alt="الشاعر حسين الأهدل" class="poet-img">
           الشاعر حسين الأهدل
         </li>
         <ul id="poet2" class="poet-poems">
@@ -34,33 +38,12 @@
           <li>قصيدة 2 - ضوء النور</li>
           <li>قصيدة 3 - في ضوء الفجر</li>
         </ul>
-        <li class="poet-name" onclick="togglePoems('poet3')">
-          <img src="images/abbas-qummi.jpg" alt="الشاعر عباس قمي" class="poet-img">
-          الشاعر عباس قمي
-        </li>
-        <ul id="poet3" class="poet-poems">
-          <li>قصيدة 1 - عيون الغرام</li>
-          <li>قصيدة 2 - على دمع الفراق</li>
-          <li>قصيدة 3 - الخيال البعيد</li>
-        </ul>
+        
+        <!-- إضافة شعراء آخرين حسب الحاجة -->
       </ul>
     </div>
   </section>
 
-  <script>
-    // دالة لفتح أو إغلاق قائمة القصائد عند الضغط على اسم الشاعر
-    function togglePoems(poetId) {
-      const poetPoems = document.getElementById(poetId);
-      
-      // إذا كانت القصائد مخفية، نقوم بإظهارها
-      if (poetPoems.style.display === "none" || poetPoems.style.display === "") {
-        poetPoems.style.display = "block";
-      } else {
-        // إذا كانت مرئية، نقوم بإخفائها
-        poetPoems.style.display = "none";
-      }
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
