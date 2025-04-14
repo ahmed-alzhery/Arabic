@@ -1,75 +1,101 @@
-/* خلفية عامة تحمل الطابع الشيعي */
+/* الخط الأساسي */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
 body {
-    background-image: url('images/background-shiite.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Tahoma", sans-serif;
-    direction: rtl;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #000;
+  font-family: 'Amiri', serif;
+  background: url('images/shiite-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
 }
 
-/* الهيدر والقائمة */
+/* تظليل خلفية */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    text-align: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-bottom: 2px solid crimson;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #f2dede;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #f9f9f9;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #f9f9f9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* تنسيق الأقسام */
+nav a:hover {
+  color: crimson;
+}
+
 section {
-    padding: 40px;
-    margin: 40px auto;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    width: 90%;
-    max-width: 900px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ffd3d3;
 }
 
-/* الصور */
-.section-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+section p,
+section li {
+  font-size: 1.2em;
+  line-height: 1.6;
 }
 
-.section-image:hover {
-    transform: scale(1.05);
+img {
+  margin-top: 20px;
+  max-width: 90%;
+  border: 3px solid crimson;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #800000;
 }
 
-/* الفوتر */
 footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #aaa;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 30px;
 }
