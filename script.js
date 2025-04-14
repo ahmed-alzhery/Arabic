@@ -1,16 +1,12 @@
-// تأثير التمرير لإظهار الأقسام تدريجياً
-const sections = document.querySelectorAll('section');
+// دالة لفتح أو إغلاق قائمة القصائد عند الضغط على اسم الشاعر
+function togglePoems(poetId) {
+  const poetPoems = document.getElementById(poetId);
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, {
-    threshold: 0.2
-});
-
-sections.forEach(section => {
-    observer.observe(section);
-});
+  // إذا كانت القصائد مخفية، نقوم بإظهارها
+  if (poetPoems.style.display === "none" || poetPoems.style.display === "") {
+    poetPoems.style.display = "block";
+  } else {
+    // إذا كانت مرئية، نقوم بإخفائها
+    poetPoems.style.display = "none";
+  }
+}
