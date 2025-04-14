@@ -1,63 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موقع الشعر الشيعي</title>
-
-  <!-- ربط ملف CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header data-aos="fade-down">
-    <h1>🌙 موقع الشعر الشيعي</h1>
-    <p>صوت الحسين في قلوب المحبين</p>
+  <header>
+    <h1>موقع الشعر الشيعي</h1>
   </header>
 
-  <nav data-aos="fade-up">
-    <ul>
-      <li><a href="#home">الرئيسية</a></li>
-      <li><a href="#poems">القصائد</a></li>
-      <li><a href="#about">عن الموقع</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" data-aos="fade-right">
-    <h2>مرحباً بك</h2>
-    <p>هنا ننشر الشعر الولائي، والقصائد الحسينية، بكل محبة وإخلاص.</p>
-    <img src="images/home-image.jpg" alt="صورة ترحيبية" width="300">
+  <section id="poets" data-aos="fade-up">
+    <h2>أسماء الشعراء</h2>
+    <div class="poets-list">
+      <ul>
+        <li class="poet-name" onclick="togglePoems('poet1')">الشاعر علي بن أبي طالب</li>
+        <ul id="poet1" class="poet-poems">
+          <li>قصيدة 1 - يا حسينُ وهل يُطفئ النورَ دمْعُ؟</li>
+          <li>قصيدة 2 - ليلُ كربلاءَ...</li>
+          <li>قصيدة 3 - صرخةُ العباسِ...</li>
+        </ul>
+        <li class="poet-name" onclick="togglePoems('poet2')">الشاعر حسين الأهدل</li>
+        <ul id="poet2" class="poet-poems">
+          <li>قصيدة 1 - أمل حياتي</li>
+          <li>قصيدة 2 - ضوء النور</li>
+          <li>قصيدة 3 - في ضوء الفجر</li>
+        </ul>
+        <li class="poet-name" onclick="togglePoems('poet3')">الشاعر عباس قمي</li>
+        <ul id="poet3" class="poet-poems">
+          <li>قصيدة 1 - عيون الغرام</li>
+          <li>قصيدة 2 - على دمع الفراق</li>
+          <li>قصيدة 3 - الخيال البعيد</li>
+        </ul>
+      </ul>
+    </div>
   </section>
 
-  <section id="poems" data-aos="fade-left">
-    <h2>أحدث القصائد</h2>
-    <ul>
-      <li>يا حسينُ وهل يُطفئ النورَ دمْعُ؟</li>
-      <li>ليلُ كربلاءَ... ودمعُ الزهراءِ</li>
-      <li>صرخةُ العباسِ... في الفراتِ</li>
-    </ul>
-    <img src="images/poets-image.jpg" alt="شاعر" width="300">
-  </section>
-
-  <section id="about" data-aos="zoom-in">
-    <h2>عن الموقع</h2>
-    <p>نسعى لنشر الشعر الشيعي الأصيل، ونعمل على أرشفة القصائد الولائية بمختلف أنواعها.</p>
-  </section>
-
-  <footer data-aos="fade-up">
-    <p>&copy; 2025 - جميع الحقوق محفوظة | موقع الشعر الشيعي</p>
-  </footer>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    // دالة لفتح أو إغلاق قائمة القصائد عند الضغط على اسم الشاعر
+    function togglePoems(poetId) {
+      const poetPoems = document.getElementById(poetId);
+      
+      // إذا كانت القصائد مخفية، نقوم بإظهارها
+      if (poetPoems.style.display === "none" || poetPoems.style.display === "") {
+        poetPoems.style.display = "block";
+      } else {
+        // إذا كانت مرئية، نقوم بإخفائها
+        poetPoems.style.display = "none";
+      }
+    }
   </script>
+
 </body>
 </html>
