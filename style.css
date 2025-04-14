@@ -1,0 +1,75 @@
+/* خلفية عامة تحمل الطابع الشيعي */
+body {
+    background-image: url('images/background-shiite.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Tahoma", sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+}
+
+/* الهيدر والقائمة */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* تنسيق الأقسام */
+section {
+    padding: 40px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* الصور */
+.section-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-image:hover {
+    transform: scale(1.05);
+}
+
+/* الفوتر */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
